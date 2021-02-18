@@ -19,6 +19,11 @@ git update-ref -d HEAD
 ```
 git rebase -i HEAD~3
 ```
+### Rebase dev on top of main (will re-write dev's commit history)
+```
+git checkout dev
+git rebase main
+```
 
 ## Working with Branches
 
@@ -35,7 +40,19 @@ git merge --squash --no-comit new_branch
 ```
 git diff branch1..branch2
 ```
+
+### If dev branch is behind main after merge
+```
+git pull
+git checkout dev
+git merge main
+git push
+```
+
 ### Delete a remote branch
 ```
 git push origin --delete branch
 ```
+
+### I want to work on my own branch, submit a pull request to the master branch, then continue working on my branch
+See: https://stackoverflow.com/questions/23008551/what-is-the-proper-way-to-continue-working-on-a-branch-containing-a-pr-under-rev
