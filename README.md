@@ -43,8 +43,10 @@ git diff branch1..branch2
 
 ### If dev branch is behind main after merge
 ```
+git checkout main
 git pull
 git checkout dev
+git pull
 git merge main
 git push
 ```
